@@ -15,11 +15,39 @@
 
     <!-- Custom styles for this template -->
     <link href="css/modern-business.css" rel="stylesheet">
-
+	<meta content='1812469949050248' property='fb:app_id'/> 
+	<meta content='100002631956050' property='fb:admins'/>
   </head>
 
   <body>
+  <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1812469949050248',
+      xfbml      : true,
+      version    : 'v2.11'
+    });
+    FB.AppEvents.logPageView();
+  };
 
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/zh_TW/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.11&appId=1812469949050248';
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+		
     <!-- Navigation -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
@@ -77,91 +105,40 @@
       </div>
     </nav>
 
-    <!-- Page Content -->
+    <!-- 網站內容 -->
     <div class="container">
-
-      <!-- Page Heading/Breadcrumbs -->
-      <h1 class="mt-4 mb-3">Pricing
-        <small>Subheading</small>
+      <h1 class="mt-4 mb-3">
+		留言板
       </h1>
-
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-          <a href="index.html">Home</a>
-        </li>
-        <li class="breadcrumb-item active">Pricing</li>
-      </ol>
-
-      <!-- Content Row -->
-      <div class="row">
-        <div class="col-lg-4 mb-4">
-          <div class="card h-100">
-            <h3 class="card-header">Basic</h3>
-            <div class="card-body">
-              <div class="display-4">$19.99</div>
-              <div class="font-italic">per month</div>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Cras justo odio</li>
-              <li class="list-group-item">Dapibus ac facilisis in</li>
-              <li class="list-group-item">Vestibulum at eros</li>
-              <li class="list-group-item">
-                <a href="#" class="btn btn-primary">Sign Up!</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-4 mb-4">
-          <div class="card card-outline-primary h-100">
-            <h3 class="card-header bg-primary text-white">Plus</h3>
-            <div class="card-body">
-              <div class="display-4">$39.99</div>
-              <div class="font-italic">per month</div>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Cras justo odio</li>
-              <li class="list-group-item">Dapibus ac facilisis in</li>
-              <li class="list-group-item">Vestibulum at eros</li>
-              <li class="list-group-item">
-                <a href="#" class="btn btn-primary">Sign Up!</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-4 mb-4">
-          <div class="card h-100">
-            <h3 class="card-header">Ultra</h3>
-            <div class="card-body">
-              <div class="display-4">$159.99</div>
-              <div class="font-italic">per month</div>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Cras justo odio</li>
-              <li class="list-group-item">Dapibus ac facilisis in</li>
-              <li class="list-group-item">Vestibulum at eros</li>
-              <li class="list-group-item">
-                <a href="#" class="btn btn-primary">Sign Up!</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- /.row -->
-
+		<div  class="fb-comments" data-href="https://www.facebook.com/mirroslicp" data-width="1000"  data-numposts="10">
+		
     </div>
-    <!-- /.container -->
+    <script src="https://apis.google.com/js/plusone.js">{lang: 'zh-TW'}</script>
+    <g:comments
+    href="https://www.facebook.com/mirroslicp"
+    width="1000"
+    first_party_property="BLOGGER"
+    view_type="FILTERED_POSTMOD">
+    </g:comments>
+		<div
+			class="fb-like"
+			data-share="true"
+			data-width="450"
+			data-show-faces="true">
+		</div>
+      </div>
+    <!-- /.網站內容 -->
 
-    <!-- Footer -->
+    <!-- 尾巴 -->
     <footer class="py-5 bg-dark">
       <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+        <p class="m-0 text-center text-white"></p>
       </div>
-      <!-- /.container -->
+      <!-- /.尾巴 -->
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+   
 
   </body>
 
