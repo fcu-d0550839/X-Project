@@ -108,6 +108,7 @@
                 <input type="number" class="form-control" id="money" min="500" required data-validation-required-message="請捐一些錢">
               </div>
             </div>
+
 			<div class="control-group form-group">
               <div class="controls">
                 <label>捐款地點:<label><br/>
@@ -139,11 +140,10 @@
 			<div class="control-group form-group">
               <div class="controls">
                 <h4>捐款方式:</h4>
-              </div>
+              
 			  <br/>
-				<form>
 				  <label for="信用卡">信用卡支付</label>
-				  <input type="radio" name="donate" id="信用卡" />
+				  <input type="radio" name="donate" id="信用卡"/>
 				  <br />
 				  <label for="郵局轉帳">郵局轉帳</label>
 				  <input type="radio" name="donate" id="郵局轉帳" />
@@ -152,9 +152,9 @@
 				  <input type="radio" name="donate" id="支票捐贈" />
 				  <br />
 				  <label for="線上捐款">線上捐款</label>
-				  <input type="radio" name="donate" id="線上捐款" />
-				  <br />			  
-				</form>
+				  <input type="radio" name="donate" id="線上捐款" required data-validation-required-message="請選擇捐款方式"/>
+				  <br />	
+			  </div>
             </div>
             <div class="control-group form-group">
               <div class="controls">
@@ -167,14 +167,12 @@
             <button type="submit" class="btn btn-primary" id="sendMessageButton">送出</button>
           </form>
         </div>
+	  </div>
+      <!-- /.row -->	
 		
 		
 		<script>
 		  $(document).ready(function(){
-
-			$("button").click(function(){
-			alert($("#list1 option:selected").index());
-			});
 
 		   $("#list1").change(function() {
 
@@ -199,13 +197,6 @@
 
 		});
 		</script>
-		
-		
-		
-		
-		
-      </div>
-      <!-- /.row -->
 
     </div>
     <!-- /.container -->
