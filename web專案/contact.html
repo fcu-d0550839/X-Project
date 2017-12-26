@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
     <title>X-公益平台</title>
 
     <!-- Bootstrap core CSS -->
@@ -111,12 +112,29 @@
               <div class="controls">
                 <label>捐款地點:<label><br/>
 			  </div>
-				<select>
-				  <option value ="1">偏鄉地點1</option>
-				  <option value ="2">偏鄉地點2</option>
-				  <option value="3">偏鄉地點3</option>
-				  <option value="4">偏鄉地點4</option>
-				</select><br/>
+				<h2>縣市</h2>
+				<select id="list1">
+				  <option>縣市1</option>
+				  <option>縣市2</option>
+				  <option>縣市3</option>
+				  <option>縣市4</option>
+				  <option>縣市5</option>
+				</select>
+
+				<h2>區域</h2>
+				<select id="list2">
+				  <option>區域1-0</option>
+				  <option>區域1-1</option>
+				  <option>區域1-2</option>
+				  <option>區域1-3</option>
+				  <option>區域1-4</option>
+				  <option>區域1-5</option>
+				  <option>區域1-6</option>
+				  <option>區域1-7</option>
+				  <option>區域1-8</option>
+				</select>
+						
+				<br/>
             </div>
 			<div class="control-group form-group">
               <div class="controls">
@@ -149,7 +167,43 @@
             <button type="submit" class="btn btn-primary" id="sendMessageButton">送出</button>
           </form>
         </div>
+		
+		
+		<script>
+		  $(document).ready(function(){
 
+			$("button").click(function(){
+			alert($("#list1 option:selected").index());
+			});
+
+		   $("#list1").change(function() {
+
+			  $selIndex = $("#list1 option:selected").index();
+
+			  if( $selIndex == 0)  {
+				$("#list2").html("<option>區域1-0 </option>  <option>區域1-1 </option>  <option>區域1-2 </option>  <option>區域1-3 </option>  <option>區域1-4 </option> <option>區域1-5 </option>  <option>區域1-6 </option>  <option>區域1-7 </option>  <option>區域1-8 </option>");
+			  }
+			  if( $selIndex == 1)  {
+				$("#list2").html("<option>區域2-0</option> <option>區域2-1</option> <option>區域2-2</option> <option>區域2-3</option> <option>區域2-4</option> <option>區域2-5</option> <option>區域2-6</option>");
+			  }
+			  if( $selIndex == 2)  {
+				$("#list2").html("<option>區域3-0 </option>  <option>區域3-1 </option>  <option>區域3-2 </option>  <option>區域3-3 </option>  <option>區域3-4 </option>  <option>區域3-5 </option>");
+			  }
+			  if( $selIndex == 3)  {
+				$("#list2").html("<option>區域4-0 </option>  <option>區域4-1 </option>  <option>區域4-2 </option>  <option>區域4-3 </option>  <option>區域4-4 </option>  <option>區域4-5 </option>");
+			  }
+			  if( $selIndex == 4)  {
+				$("#list2").html("<option>區域5-0 </option>  <option>區域5-1 </option>  <option>區域5-2 </option>  <option>區域5-3 </option>  <option>區域5-4 </option>");
+			  }
+		  });
+
+		});
+		</script>
+		
+		
+		
+		
+		
       </div>
       <!-- /.row -->
 
