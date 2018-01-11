@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>signin</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		
+		<meta name="google-signin-client_id"
+        content="387621315637-lctfm3icqps97r467mp4utu3e8drk9vp.apps.googleusercontent.com">		
+		
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+		
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
+        <style>
+              .g-signin2{
+                  margin-left: 500px;
+                  margin-top: 200px;
+              }
+              .data{
+				  display:none;
+			  }
+        </style>
+
+    </head>
+		
+    <body>
+        <div class="g-signin2" data-onsuccess="onSignIn"> </div>
+        <div class="data">
+          <p>Profile Details</p>
+          <img id="pic" class="img-circle" width="100" height="100"/>
+          <p>Email Address </p>
+          <p id="email" class="alert alert-danger"></p>
+          <button onclick="signOut()" class="btn btn-danger">SignOut</button>
+        </div>
+		
+	<script>
+	function onSignIn(googleUser) {
+	
+ 
+		alert("success log in ");
+		var profile = googleUser.getBasicProfile();
+		$(".g-signin2").css("display","none");
+		$(".data").css("display","block");
+		$("#pic").attr('src',profile.getImageUrl());
+		$("#email").text(profile.getEmail());
+	}
+
+	function signOut(){
+		
+		alert("success sign out");
+		var auth2 = gapi.auth2.getAuthInstance();
+		auth2.signOut().then(function(){
+		
+			
+			
+			$(".g-signin2").css("display","block");
+			$(".data").css("display","none");
+		
+	});
+	
+	}	
+	
+	</script>	
+		
+    </body>
+
+
+
+
+</html>
