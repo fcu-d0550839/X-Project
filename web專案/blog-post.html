@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
     <title>X-公益平台</title>
 
     <!-- Bootstrap core CSS -->
@@ -112,7 +113,90 @@
 		</div>
 		
 		
+		<div>
+		<h2>小測驗時間</h2>
+		<br>
+		<p>1.請問下列哪兩個族群具有紋面的文化?</p>
+			<select id="list1">
+			  <option>泰雅族 和 鄒族</option>
+			  <option>泰雅族 和 賽夏族</option>
+			  <option>泰雅族 和 邵族</option>
+			  <option>泰雅族 和 阿美族</option>
+			</select>
+
+
+		<br><br>
 		
+		<button id = "button1">檢查答案</button>
+		<br><br><br>
+		
+		<p>2.請問泰雅族的傳統信仰本質是下列何者?</p>
+			<select id="list2">
+			  <option>浪漫主義</option>
+			  <option>極簡主義</option>
+			  <option>精靈主義</option>
+			  <option>愛國主義</option>
+			</select>
+
+
+		<br><br>
+		
+		<button id = "button2">檢查答案</button>
+		
+		
+		
+		
+		<br><br><br>
+		</div>
+		<script>
+		  $(document).ready(function(){
+
+			$("#button1").click(function(){		  
+
+			  $selIndex = $("#list1 option:selected").index();
+
+			  if( $selIndex == 0)  {
+				alert("答錯了!再來一次");
+			  }
+			  if( $selIndex == 1)  {
+				alert("恭喜答對!");
+			  }
+			  if( $selIndex == 2)  {
+				alert("答錯了!再來一次");
+			  }
+			  if( $selIndex == 3)  {
+				alert("答錯了!再來一次");
+			  }
+			 
+			});
+			
+			
+			
+			$("#button2").click(function(){		  
+
+			  $selIndex2 = $("#list2 option:selected").index();
+
+			  if( $selIndex2 == 0)  {
+				alert("答錯了!再來一次");
+			  }
+			  if( $selIndex2 == 1)  {
+				alert("答錯了!再來一次");
+			  }
+			  if( $selIndex2 == 2)  {
+				alert("恭喜答對!");
+			  }
+			  if( $selIndex2 == 3)  {
+				alert("答錯了!再來一次");
+			  }
+			 
+			});
+			
+		});
+		
+		
+		</script>
+		
+				
     
 		<font size="1">參考資料:</font>
 		<br>
@@ -125,15 +209,8 @@
 		<font size="1">http://www.knowlegde.ipc.gov.taipei/ct.asp?xItem=1001630&CtNode=17010&mp=cb01</font>
 		
       </div>
-	 
-
-	<!--右邊 -->
 	
 	
-	
-
-
- 
 
     <!-- Footer -->
     <footer class="py-5 bg-dark">
