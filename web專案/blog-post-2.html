@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
 
     <title>X-公益平台</title>
 
@@ -114,9 +116,97 @@
 		<br><br>
 		<img class="img-fluid rounded" src="./img/sai-xia_pic_H04_07.jpg" width="350">
 		</div>
-          
+       </div>
+	   
+	   
+	   
+	   <div>
+		<h2>小測驗時間</h2>
+		<br>
+		<p>1.請問由各氏族的祭團長老主持的矮靈祭幾年舉辦一次?</p>
+			<select id="list1">
+			  <option>一年一次</option>
+			  <option>兩年一次</option>
+			  <option>三年一次</option>
+			  <option>四年一次</option>
+			</select>
 
-        </div>
+
+		<br><br>
+		
+		<button id = "button1">檢查答案</button>
+		<br><br><br>
+		
+		<p>2.請問由各部落的氏族長老主持的播種祭幾年舉辦一次?</p>
+			<select id="list2">
+			  <option>四年一次</option>
+			  <option>三年一次</option>
+			  <option>兩年一次</option>
+			  <option>一年一次</option>
+			</select>
+
+
+		<br><br>
+		
+		<button id = "button2">檢查答案</button>
+		
+		
+		
+		
+		<br><br><br>
+		</div>
+		<script>
+		  $(document).ready(function(){
+
+			$("#button1").click(function(){		  
+
+			  $selIndex = $("#list1 option:selected").index();
+
+			  if( $selIndex == 0)  {
+				alert("答錯了!再來一次");
+			  }
+			  if( $selIndex == 1)  {
+				alert("恭喜答對!");
+			  }
+			  if( $selIndex == 2)  {
+				alert("答錯了!再來一次");
+			  }
+			  if( $selIndex == 3)  {
+				alert("答錯了!再來一次");
+			  }
+			 
+			});
+			
+			
+			
+			$("#button2").click(function(){		  
+
+			  $selIndex2 = $("#list2 option:selected").index();
+
+			  if( $selIndex2 == 0)  {
+				alert("答錯了!再來一次");
+			  }
+			  if( $selIndex2 == 1)  {
+				alert("答錯了!再來一次");
+			  }
+			  if( $selIndex2 == 2)  {
+				alert("答錯了!再來一次");
+			  }
+			  if( $selIndex2 == 3)  {
+				alert("恭喜答對!");
+			  }
+			 
+			});
+			
+		});
+		
+		
+		</script>
+	   
+	   
+	   
+	   
+	   
 		<font size="1">參考資料:</font>
 		<br>
 		<font size="1">https://zh.wikipedia.org/wiki/%E8%B3%BD%E5%A4%8F%E6%97%8F</font>

@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
 
     <title>X-公益平台</title>
 
@@ -92,12 +94,17 @@
 		  <br>
 		  <h3>2  文化：</h3>
 		  <p>鄒族部落中最重要的祭儀為「播種祭」、「homeyaya （小米收穫祭）」與「mayasvi （瑪雅士比）」三大祭儀。鄒族一年一度的mayasvi （瑪雅士比），目前分由達邦及特富野分別舉行祭典儀式，mayasvi又譯為戰祭。</p>
+		  <p>以獵物的皮為衣飾是鄒族的特色。鄒族以柔軟的山羌皮毛做帽飾、皮鞋；以山羊皮作衣服。鄒族鞣皮的技術讓其他族群望塵莫及。
+先刮除皮上的肉，曬乾、再放在臼裡，以杵打軟，或放在粗大圓木上由兩人拉扯，如此重覆多次，直到獸皮柔軟為止。鄒族的皮衣、帽並不保留獵物的手，。</p>
           <br>
 		  <br>
 		  <br>
 		  <br>
 		  <h3>3  傳統宗教：</h3>
-		  <p>鄒族的Kanakanavu、Hla'alua和阿里山Tsou等三群各自有其特有的「傳統」宗教信仰體系，包括，各有一套神靈信仰體系、一套隨著作物種植、狩獵以及魚撈等生產活動運作的歲時祭儀，還有各自的生命儀禮與巫術等。舉行這些「傳統」祭典儀式時，需由特定的宗教領袖或儀式專家來執行。</p>
+		  <p>鄒族的Kanakanavu(卡那卡那富族)、Hla'alua(拉阿魯哇族)和阿里山Tsou等三群各自有其特有的「傳統」宗教信仰體系，包括，各有一套神靈信仰體系、一套隨著作物種植、狩獵以及魚撈等生產活動運作的歲時祭儀，還有各自的生命儀禮與巫術等。舉行這些「傳統」祭典儀式時，需由特定的宗教領袖或儀式專家來執行。</p>
+		  <p>舉行這些「傳統」祭典儀式時，需由特定的宗教領袖或儀式專家來執行。Kanakanavu過去有巫師ulupu主持「傳統」祭儀，但由於最後一位巫師已經在十多年去世了，因此今日是由頭目來主持，並且由長老們來共同協助。</p>
+		  <p>至於Hla'alua目前仍舉行的「傳統」祭儀miatungusu也主要是由頭目或副頭目來主持，並且會有熟悉儀式過程的長老們擔任助祭，以協助祭儀能夠順利完成。</p>
+		  <p>阿里山Tsou的情形亦相差不遠，各家族族長或各社的領袖於家族祭儀或全社祭儀舉行的過程當中，帶領儀式過程的進行，各家族或各社的長老則從旁提供意見並協助儀式過程的執行。</p>
           <br>
 		  <br> 		  
 
@@ -118,6 +125,90 @@
 		<img class="img-fluid rounded" src="./img/zhou_pic_G04_03.jpg" width="350">
 		</div>
         
+		
+		<div>
+		<h2>小測驗時間</h2>
+		<br>
+		<p>1.請問下列何者 "不是" 鄒族的文化?</p>
+			<select id="list1">
+			  <option>播種祭</option>
+			  <option>小米收穫祭</option>
+			  <option>戰祭</option>
+			  <option>矮靈祭</option>
+			</select>
+
+
+		<br><br>
+		
+		<button id = "button1">檢查答案</button>
+		<br><br><br>
+		
+		<p>2.請問下列何者 "不是" 原本歸類在鄒族的?</p>
+			<select id="list2">
+			  <option>卡那卡那富族</option>
+			  <option>阿美族</option>
+			  <option>拉阿魯哇族</option>
+			</select>
+
+
+		<br><br>
+		
+		<button id = "button2">檢查答案</button>
+		
+		
+		
+		
+		<br><br><br>
+		</div>
+		<script>
+		  $(document).ready(function(){
+
+			$("#button1").click(function(){		  
+
+			  $selIndex = $("#list1 option:selected").index();
+
+			  if( $selIndex == 0)  {
+				alert("答錯了!再來一次");
+			  }
+			  if( $selIndex == 1)  {
+				alert("答錯了!再來一次");
+			  }
+			  if( $selIndex == 2)  {
+				alert("答錯了!再來一次");
+			  }
+			  if( $selIndex == 3)  {
+				alert("恭喜答對!");
+			  }
+			 
+			});
+			
+			
+			
+			$("#button2").click(function(){		  
+
+			  $selIndex2 = $("#list2 option:selected").index();
+
+			  if( $selIndex2 == 0)  {
+				alert("答錯了!再來一次");
+			  }
+			  if( $selIndex2 == 1)  {
+				alert("恭喜答對!");
+			  }
+			  if( $selIndex2 == 2)  {
+				alert("答錯了!再來一次");
+			  }
+			 
+			});
+			
+		});
+		
+		
+		</script>
+		
+		
+		
+		
+		
           
 
         </div>
@@ -130,6 +221,8 @@
 		<font size="1">http://www.knowlegde.ipc.gov.taipei/ct.asp?xItem=1001646&CtNode=17015&mp=cb01</font>
 		<br>
 		<font size="1">http://www.tipp.org.tw/aborigines_info.asp?A_ID=12&AC_No=1</font>
+		<br>
+		<font size="1">http://www.tacp.gov.tw/home02.aspx?ID=$3101&IDK=2&EXEC=L</font>		
       </div>
 	  
       <!-- /.row -->

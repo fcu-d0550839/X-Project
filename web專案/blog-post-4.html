@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
     <title>X-公益平台</title>
 
     <!-- Bootstrap core CSS -->
@@ -89,7 +90,8 @@
 		  <br>
 		  <h3>2  文化：</h3>
 		  <p>邵族的服飾上使用大量的幾何形花紋。此外，邵族人以匏木手藝為人稱道，可以製作出一般木臼、木杵、湯匙等日常物件，還可以匏木製造獨木舟。</p>
-          <br>
+          <p>邵族人將祖靈信仰實體化，創造出「公媽籃」，也稱之為「祖靈籃」。籃中盛放的是祖先遺留下來的衣服、飾品、珠寶，年代越久遠則放在越上層，藉以代表祖靈的住所。邵族的每一戶都會有一只「祖靈籃」，通常擺置在神桌上或離地約兩公尺的壁上。</p>
+		  <br>
 		  <br>
 		  <h3>3  傳統宗教：</h3>
 		  <p>邵族的傳統宗教為祖靈信仰，他們相信，人死後會成為祖靈的核心機制，認為祖靈能驅惡賜福，個人的生命週期以及社內各項的時序歷程，都必須透過祖靈來渡過與完成，因此，告知祖靈，就成為邵族人日常生活中最重要的一個課題。邵族人每一年都有許多繁複的儀式活動，除了部落的歲時祭儀之外，小到買冰箱、電視，大到喜慶婚喪，都必須請女性祭司「先生媽（shinshi）」來家中舉行儀式，目的就是要告訴祖靈，家中的一切變化，由此可知，祖靈深切地影響著邵族人的生活。</p>
@@ -111,7 +113,93 @@
 		<br><br>
 		<img class="img-fluid rounded" src="./img/shao_18.jpg" width="350">
 		</div>
-	       
+	      
+		
+		<div>
+		<h2>小測驗時間</h2>
+		<br>
+		<p>1.請問下列何者 "不是" 邵族聚集過的地方?</p>
+			<select id="list1">
+			  <option>水沙連</option>
+			  <option>伊達邵</option>
+			  <option>雨社山</option>
+			  <option>火焰山</option>
+			</select>
+
+
+		<br><br>
+		
+		<button id = "button1">檢查答案</button>
+		<br><br><br>
+		
+		<p>2.請問除了部落的歲時祭儀之外，小到買冰箱、電視，大到喜慶婚喪，都會請誰到家中舉行儀式?</p>
+			<select id="list2">
+			  <option>先生爸</option>
+			  <option>先生哥</option>
+			  <option>先生媽</option>
+			  <option>先生姐</option>
+			</select>
+
+
+		<br><br>
+		
+		<button id = "button2">檢查答案</button>
+		
+		
+		
+		
+		<br><br><br>
+		</div>
+		<script>
+		  $(document).ready(function(){
+
+			$("#button1").click(function(){		  
+
+			  $selIndex = $("#list1 option:selected").index();
+
+			  if( $selIndex == 0)  {
+				alert("答錯了!再來一次");
+			  }
+			  if( $selIndex == 1)  {
+				alert("答錯了!再來一次");
+			  }
+			  if( $selIndex == 2)  {
+				alert("答錯了!再來一次");
+			  }
+			  if( $selIndex == 3)  {
+				alert("恭喜答對!");
+			  }
+			 
+			});
+			
+			
+			
+			$("#button2").click(function(){		  
+
+			  $selIndex2 = $("#list2 option:selected").index();
+
+			  if( $selIndex2 == 0)  {
+				alert("答錯了!再來一次");
+			  }
+			  if( $selIndex2 == 1)  {
+				alert("答錯了!再來一次");
+			  }
+			  if( $selIndex2 == 2)  {
+				alert("恭喜答對!");
+			  }
+			  if( $selIndex2 == 3)  {
+				alert("答錯了!再來一次");
+			  }
+			 
+			});
+			
+		});
+		
+		
+		</script>
+		
+		
+		
           
 
         </div>
@@ -126,7 +214,8 @@
 		<font size="1">http://www.moc.gov.tw/information_250_38353.html</font>
 		<br>
 		<font size="1">http://www.knowlegde.ipc.gov.taipei/ct.asp?xItem=1001654&CtNode=17018&mp=cb01</font>
-		
+		<br>
+		<font size="1">http://www.tacp.gov.tw/home02.aspx?ID=$3091&IDK=2&EXEC=L</font>		
       </div>
 	  
       <!-- /.row -->
