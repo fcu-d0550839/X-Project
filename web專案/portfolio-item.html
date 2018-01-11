@@ -34,7 +34,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="portfolio-1.html">偏鄉文化介紹</a>
-            </li>						
+            </li>
 			<li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 原住民文化介紹
@@ -45,7 +45,7 @@
                 <a class="dropdown-item" href="blog-post-3.html">鄒族</a>
 				<a class="dropdown-item" href="blog-post-4.html">邵族</a>
               </div>
-            </li>			
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.html">線上捐款</a>
             </li>
@@ -70,9 +70,13 @@
 
       <!-- Portfolio Item Row -->
       <div class="row">
-
+        <!-- 幻燈秀 -->
         <div class="col-md-8">
-          <img class="img-fluid" src="./img/腳踏車.jpg" alt="">
+          <ul id="slides">
+	           <li class="slide showing"></li>
+	           <li class="slide"></li>
+	           <li class="slide"></li>
+          </ul>
         </div>
 
         <div class="col-md-4">
@@ -131,7 +135,18 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- 幻燈秀 -->
+    <script>
+      var slides = document.querySelectorAll('#slides .slide');
+      var currentSlide = 0;
+      var slideInterval = setInterval(nextSlide,2000);
 
+      function nextSlide(){
+        slides[currentSlide].className = 'slide';
+        currentSlide = (currentSlide+1)%slides.length;
+        slides[currentSlide].className = 'slide showing';
+      }
+    </script>
   </body>
 
 </html>
