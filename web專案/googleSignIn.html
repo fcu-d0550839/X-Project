@@ -1,8 +1,15 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <title>signin</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<!-- 登入 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		
 		<meta name="google-signin-client_id"
         content="387621315637-lctfm3icqps97r467mp4utu3e8drk9vp.apps.googleusercontent.com">		
@@ -13,26 +20,86 @@
 		
         <style>
               .g-signin2{
-                  margin-left: 500px;
-                  margin-top: 200px;
+                width:100px;
+				margin: auto;
               }
               .data{
 				  display:none;
 			  }
         </style>
+	
+    <title>X-公益平台</title>
 
-    </head>
-		
-    <body>
-        <div class="g-signin2" data-onsuccess="onSignIn"> </div>
-        <div class="data">
-          <p>Profile Details</p>
-          <img id="pic" class="img-circle" width="100" height="100"/>
-          <p>Email Address </p>
-          <p id="email" class="alert alert-danger"></p>
-          <button onclick="signOut()" class="btn btn-danger">SignOut</button>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="portfolio-item.html">X-公益平台</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio-item.html">關於我們</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio-1.html">偏鄉文化介紹</a>
+            </li>
+			<li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                原住民文化介紹
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                <a class="dropdown-item" href="blog-post.html">泰雅族</a>
+                <a class="dropdown-item" href="blog-post-2.html">賽夏族</a>
+                <a class="dropdown-item" href="blog-post-3.html">鄒族</a>
+				<a class="dropdown-item" href="blog-post-4.html">邵族</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">線上捐款</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pricing.html">留言板</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="聯絡我們.html">聯絡我們</a>
+            </li>
+          </ul>
         </div>
+      </div>
+    </nav>
+	
+	
+	   <br><br>
+	   <h1 align="center">Welcome Sign In X-公益平台 </h1>
+	
 		
+	   <!-- 登入 -->
+	   <br><br><br>
+		<div class="g-signin2" data-onsuccess="onSignIn"> </div>
+        <div class="data">
+		
+          <h2 align="center">Profile Details</h2>
+          <p align="center"><img id="pic" class="img-circle" width="100" height="100" /></p>
+          <h2 align="center">Email Address</h2>
+          <h3 id="email" align="center" class="alert alert-success"> </h3>
+		  <p align="center"> <input type="button" align="center" value="~~~~~進  入  首  頁~~~~~" class="btn btn-success"
+			onclick="location.href='https://machine116688tw.000webhostapp.com/portfolio-item.html'"> </p>
+		  
+          <p align="center"> <button onclick="signOut()" class="btn btn-danger">SignOut</button> </p>
+        </div>
+		<br><br><br>
 	<script>
 	function onSignIn(googleUser) {
 	
@@ -42,14 +109,14 @@
 		$(".g-signin2").css("display","none");
 		$(".data").css("display","block");
 		$("#pic").attr('src',profile.getImageUrl());
-		$("#email").text(profile.getEmail());
+		$("#email").html(profile.getEmail());
 	}
 
 	function signOut(){
 		
 		alert("success sign out");
 		var auth2 = gapi.auth2.getAuthInstance();
-		auth2.signOut().then(function(){
+		auth2.signOut().text(function(){
 		
 			
 			
@@ -60,11 +127,26 @@
 	
 	}	
 	
-	</script>	
-		
-    </body>
+	</script>
+	
+	
+	
+	
+	
 
 
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy;X-公益平台 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
 
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+  </body>
 
 </html>
