@@ -1,2 +1,4 @@
 # X-Project
-Coffee0324 帳號主人為 fcu-d0550767
+
+Coffee0324 帳號 == fcu-d0550767
+i1239a8e   帳號 == fcu-d0342570
